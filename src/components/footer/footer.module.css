@@ -1,0 +1,52 @@
+.footer {
+    background: #0067A3;
+    font-family: 'Roboto-Regular', serif;
+	color: #fff;
+    display: flex;
+    padding: 0 21px;
+    font-size: 18px;
+    height: 55px;
+}
+
+.counters {
+    display: flex;
+}
+
+.counter {
+    position: relative;
+    margin-right: 36px;
+}
+
+.copy {
+	margin-left: auto;
+    padding: 17px 0;
+}
+
+
+@media (max-width: 750px) {
+    .counter, .copy {
+        font-size: 16px;
+    }
+
+    .counter {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .copy {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 330px) {
+    .counter, .copy {
+        font-size: 14px;
+    }
+}

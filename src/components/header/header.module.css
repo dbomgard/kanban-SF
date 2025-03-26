@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Roboto-Regular";
+    font-style: normal;
+    src: local("Roboto-Regular"),
+        url("../../fonts/Roboto-Regular.woff") format("woff")
+}
+
+.header {
+    background-color: #0067A3;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    font-family: 'Roboto-Regular', serif;
+    justify-content: space-between;
+    padding: 5px 40px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.menu {
+    display: flex;
+}
+
+.avatar {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+    background-color: #0067A3;
+}
+
+.arrowUp, .arrowDown {
+    width: 24px;
+    height: 24px;
+	margin: 0;
+	padding-bottom: 6px;
+}
+
+
+
+@media (max-width: 470px ) {
+    .title {
+        display: none;
+    }
+
+    .header {
+        justify-content: flex-end;
+    }
+}

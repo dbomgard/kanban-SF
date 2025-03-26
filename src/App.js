@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import { BrowserRouter } from "react-router-dom"
+import Header from './components/header/header';
+import Main from "./components/main/main"
+import Footer from "./components/footer/footer"
 
 function App() {
+  const initialState = JSON.parse(window.localStorage.getItem("tasks")) || []
+  const [tasks, setTasks] = useState(initialState)
+  const activeTasks = tasks.filter(task => task.status === 'Backlog').length 
+  const finishedTasks = tasks.filter(task => task.status === 'Finished').length
+
+  useEffect(() => {
+    window.localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className='wrapper'>
+        <Header />
+        <Main tasks = {tasks} setTasks = {setTasks} />
+        <Footer activeTasks = {activeTasks} finishedTasks = {finishedTasks} />
+      </div>
+    </BrowserRouter>
   );
 }
 

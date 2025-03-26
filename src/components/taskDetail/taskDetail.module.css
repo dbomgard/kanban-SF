@@ -1,0 +1,47 @@
+.wrapper {
+	background: #ffffff;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 28px;
+}
+
+.title {
+	margin: 0;
+	font-size: 24px;
+	font-family: 'Roboto-Regular', serif;
+	font-weight: 400;
+}
+
+.description
+{
+	background: #fff;
+	border-radius: 8px;
+	border: #fff;
+	resize: none;
+	padding: 20px;
+	display: block;
+	font-size: 18px;
+	font-family: 'Roboto-Regular', serif;
+	height: 548px;
+	width: 95%;
+}
+
+.backLink {
+    text-decoration: none;
+    display: flex;
+    margin-left: auto;
+	max-width: 25px;
+    color: #737373;
+    font-size: 28px;
+	transition: color 0.3s ease;
+}
+
+.backLink:hover {
+	color: #000;
+}
